@@ -12,7 +12,7 @@ class FriendsTest < ApplicationSystemTestCase
 
   test "should create friend" do
     visit friends_url
-    click_on "New friend"
+    click_on "Add New friend"
 
     fill_in "Email", with: @friend.email
     fill_in "First name", with: @friend.first_name

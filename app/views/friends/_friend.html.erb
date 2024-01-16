@@ -1,27 +1,15 @@
 <div id="<%= dom_id friend %>">
-  <p>
-    <strong>First name:</strong>
-    <%= friend.first_name %>
-  </p>
 
-  <p>
-    <strong>Last name:</strong>
-    <%= friend.last_name %>
-  </p>
+  <div class="card w-50">
+    <div class="card-body">
+      <h5 class="card-title"><%= friend.first_name %> <%= friend.last_name %></h5>
+      <p class="card-text"><%= friend.email %> | <%= friend.phone %> | <%= friend.twitter %></p>
 
-  <p>
-    <strong>Email:</strong>
-    <%= friend.email %>
-  </p>
+      <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-secondary" %>
+      <%= link_to "Back", friends_path, class:"btn btn-dark" %>
 
-  <p>
-    <strong>Phone:</strong>
-    <%= friend.phone %>
-  </p>
-
-  <p>
-    <strong>Twitter:</strong>
-    <%= friend.twitter %>
-  </p>
+      <%= button_to "Destroy this friend", @friend, method: :delete %>
+    </div>
+  </div>
 
 </div>
